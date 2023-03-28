@@ -1,0 +1,9 @@
+.appName {
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.navbar-light {
+  background-color: #e3f2fd;
+}
