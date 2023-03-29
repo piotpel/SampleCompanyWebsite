@@ -1,3 +1,6 @@
+using API.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
+builder.Services.AddDbContext<DataContext>(options =>
+{ options.UseSqlServer("Data Source=DESKTOP-KS2H7N6;Initial Catalog=CompanyApp;Integrated Security=True;TrustServerCertificate=True"); });
 
 var app = builder.Build();
 
