@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 builder.Services.AddDbContext<DataContext>(options =>
-{ options.UseSqlServer("Data Source=DESKTOP-KS2H7N6;Initial Catalog=CompanyApp;Integrated Security=True;TrustServerCertificate=True"); });
+{ options.UseSqlServer(builder.Configuration.GetConnectionString("LocalSqlServer")); });
 
 var app = builder.Build();
 
