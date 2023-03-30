@@ -1,0 +1,12 @@
+<div class="news w-75" >
+    <div class="singleNews w-100" *ngFor="let item of news$ |async">
+        <div class="card w-100 mb-5" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{item.subtitle}}</h6>
+                <p class="card-text">{{item.content}}</p>
+                <a href="#" class="card-link">Read more</a>
+            </div>
+        </div>
+    </div>
+</div>
