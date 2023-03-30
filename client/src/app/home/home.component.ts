@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { News } from '../models/news';
 import { NewsService } from '../services/news.service';
 import {ActivatedRoute } from '@angular/router'
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ import {ActivatedRoute } from '@angular/router'
 })
 export class HomeComponent implements OnInit {
   news$: Observable<News[]> | undefined;
+  apiUrl: string = environment.apiUrl;
 
   constructor(private newsService: NewsService,
   private route:ActivatedRoute) { } //private access modifier enables treating variable as a class member
