@@ -1,0 +1,42 @@
+
+
+<table class="table align-middle mb-0 bg-light">
+    <thead class="bg-secondary">
+        <tr>
+            <th>Location</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Position</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let job of jobs$ | async" >
+            <td>
+                <div class="d-flex align-items-center">
+                    <i class="fi fi-{{job.country}} bg-light"></i>
+                    <div class="ms-3">
+                        <p class="fw-bold mb-1">{{job.city}}</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <p class="fw-normal mb-1">{{job.title}}</p>
+            </td>
+            <td>
+                <p *ngIf="job.isOpened;else job_closed">
+                    <button type="button" class="btn btn-success">Opened</button>
+                </p>
+                <ng-template #job_closed><button type="button" class="btn btn-warning">Closed</button></ng-template>
+            </td>
+            <td>{{job.tier}}</td>
+            <td>
+                <button type="button"
+                        class="btn btn-outline-dark"
+                        mdbRipple rippleColor="dark">
+                    Details
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

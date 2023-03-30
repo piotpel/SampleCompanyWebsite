@@ -1,0 +1,17 @@
+table{
+    font-size:18px;
+    min-height:50px;
+}
+table td {
+  vertical-align: middle;
+  text-align:center
+}
+
+table tr {
+  height: 10vh;
+}
+  table th {
+    font-size: 25px;
+    vertical-align: middle;
+    text-align: center
+  }
