@@ -3,4 +3,6 @@ export interface News {
   title: string;
   subtitle: string;
   content: string;
+  teaser: string;
+  uploadedAt: string;
 }
