@@ -8,6 +8,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
+import { ContactComponent } from './contact/contact.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { NewsArticleComponent } from './news-article/news-article.component';
     NavbarComponent,
     HomeComponent,
     NewsArticleComponent,
+    ContactComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    TabsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
