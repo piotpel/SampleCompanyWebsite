@@ -11,6 +11,7 @@ import { NewsArticleComponent } from './news-article/news-article.component';
 import { ContactComponent } from './contact/contact.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    MdbCarouselModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

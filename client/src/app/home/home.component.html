@@ -1,6 +1,6 @@
 <div class="news">
     <h2 class="news-header">Latest News</h2>
-    <div *ngIf="(news$ | async)?.length; else no_news_yet">
+    <div *ngIf="!loading && (news$ | async)?.length; else no_news_yet">
         <div class="singleNews w-100" *ngFor="let item of news$ | async">
             <div class="card w-100 mb-5">
                 <div class="card-body">
