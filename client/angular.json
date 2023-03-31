@@ -26,6 +26,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
               "./node_modules/flag-icons/css/flag-icons.min.css",
+              "./node_modules/bs-stepper/dist/css/bs-stepper.min.css",
               "src/styles.css"
             ],
             "scripts": []

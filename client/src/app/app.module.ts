@@ -13,6 +13,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { JobsComponent } from './jobs/jobs.component';
+import { CompanyServicesComponent } from './company-services/company-services.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { JobsComponent } from './jobs/jobs.component';
     ContactComponent,
     AboutUsComponent,
     JobsComponent,
+    CompanyServicesComponent,
   ],
   imports: [
     BrowserModule,
