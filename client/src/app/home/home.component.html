@@ -1,8 +1,8 @@
-<div class="news">
-    <h2 class="news-header">Latest News</h2>
+<div class="news mb-5">
+    <h2 class="news-header" style="text-align:center;">Latest News</h2>
     <div *ngIf="!loading && (news$ | async)?.length; else no_news_yet">
         <div class="singleNews w-100" *ngFor="let item of news$ | async">
-            <div class="card w-100 mb-5">
+            <div class="card w-100 mb-5 p-4">
                 <div class="card-body">
                     <h5 class="card-title">{{ item.title }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ item.subtitle }}</h6>

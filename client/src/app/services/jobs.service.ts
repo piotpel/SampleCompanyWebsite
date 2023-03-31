@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { map, of } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Job } from '../models/Job';
 
@@ -18,6 +18,8 @@ export class JobsService {
   }
 
   getJobById(id:number){
-    return this.jobs.filter(x => x.jobId == id);
+    const job = this.jobs.find(x => x.jobId == id);
+    if (job) { return of(job); }
+    return this.httpClient.get(this.apiUrl+'jobs/'+id)
   }
 }

@@ -1,0 +1,17 @@
+<div class="card text-center mt-5">
+    <div class="card-header p-4" style="font-size:22px;">
+        <i class="fi fi-{{job.country}} bg-light"></i> {{job.city}}
+    </div>
+    <div class="card-body p-5">
+        <button type="button" class="btn btn-outline-secondary btn-lg mb-4 mt-1">{{job.tier}}</button>
+        <h1 class="card-title mb-5"> {{job.title}}</h1>
+        <hr class="mb-5" />
+        <div class="d-flex justify-content-center p-4 mb-4" style="font-size: 18px; line-height: 1.5;">
+            <p class="card-text w-50 mb-3  border border-dark rounded p-5">{{job.description}}</p>
+        </div>
+        <a onclick="navigator.clipboard.writeText('human.resources@companyname.com');" class="btn btn-primary">Copy recruiting e-mail</a>
+    </div>
+    <div class="card-footer text-muted p-3">
+        We are waiting for you!
+    </div>
+</div>

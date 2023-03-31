@@ -14,6 +14,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { JobsComponent } from './jobs/jobs.component';
 import { CompanyServicesComponent } from './company-services/company-services.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CompanyServicesComponent } from './company-services/company-services.co
     AboutUsComponent,
     JobsComponent,
     CompanyServicesComponent,
+    JobDetailsComponent,
   ],
   imports: [
     BrowserModule,
