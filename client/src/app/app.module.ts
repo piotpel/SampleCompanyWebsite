@@ -15,6 +15,11 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { JobsComponent } from './jobs/jobs.component';
 import { CompanyServicesComponent } from './company-services/company-services.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
+import { FaqComponent } from './faq/faq.component';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +32,7 @@ import { JobDetailsComponent } from './job-details/job-details.component';
     JobsComponent,
     CompanyServicesComponent,
     JobDetailsComponent,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,12 @@ import { JobDetailsComponent } from './job-details/job-details.component';
     NgbModule,
     HttpClientModule,
     TabsModule.forRoot(),
-    MdbCarouselModule 
+    MdbCarouselModule,
+    CollapseModule.forRoot(),
+    AccordionModule.forRoot(),
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

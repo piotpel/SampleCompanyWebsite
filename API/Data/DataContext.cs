@@ -13,5 +13,6 @@ namespace API.Data
 
         public DbSet<News> News { get; set; }
         public DbSet<Job> Jobs { get; set; }
+        public DbSet<Newsletter> Newsletters { get; set; }
     }
 }

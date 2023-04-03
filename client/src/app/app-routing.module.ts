@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CompanyServicesComponent } from './company-services/company-services.component';
 import { ContactComponent } from './contact/contact.component';
+import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { JobsComponent } from './jobs/jobs.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutUsComponent },
   { path: 'jobs', component: JobsComponent },
   { path: 'job/:jobId', component: JobDetailsComponent},
-  { path: 'services', component: CompanyServicesComponent}];
+  { path: 'services', component: CompanyServicesComponent },
+  { path: 'faq', component: FaqComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -34,10 +34,55 @@
     </tab>
     <tab heading="Our newsletter">
         <div class="p-3">
-            <h3>Our newsletter</h3>
-            <p>Welcome to our Newsletter tab! We know that staying up to date on the latest news and trends is important, so we've created a newsletter to help you stay informed. Our newsletter covers a wide range of topics, from business and technology to lifestyle and entertainment. We also feature exclusive deals and promotions that you won't find anywhere else. So sign up today to get all the latest news and exclusive offers delivered right to your inbox!</p>
+            <h3 class="text-center mt-3 mb-3">Our newsletter</h3>
+            <p class="mb-4">Welcome to our Newsletter tab! We know that staying up to date on the latest news and trends is important, so we've created a newsletter to help you stay informed. Our newsletter covers a wide range of topics, from business and technology to lifestyle and entertainment. We also feature exclusive deals and promotions that you won't find anywhere else. So sign up today to get all the latest news and exclusive offers delivered right to your inbox!</p>
             <hr />
-            Newsletter form will go there
+            <h1 class="text-center">Join our newsletter now!</h1>
+            <div class="container-fluid">
+                <form [formGroup]="newsletterForm" (ngSubmit)="insertNewsletter(newsletterForm.value)" class="w-75 p-4 mx-auto text-center border border-light">
+                    <div class="form-group">
+                        <div class="row mb-3 mt-4 justify-content-center">
+                            <div class="col-1 me-3">
+                                <label class="col-form-label">Forename:</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text"
+                                       name='firstName'
+                                       class="form-control"
+                                       formControlName="firstName"
+                                       [class.is-invalid]="newsletterForm.get('firstName')?.errors && newsletterForm?.touched">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-1 me-3">
+                                <label class="col-form-label">Email:</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="email"
+                                       name='email'
+                                       class="form-control"
+                                       formControlName="email"
+                                       [class.is-invalid]="newsletterForm.get('email')?.errors && newsletterForm?.touched">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center justify-content-center">
+                        <div class="col-4">
+                            <button [disabled]="!newsletterForm.valid" type="submit" class="btn btn-lg btn-outline-primary mt-4">Subscribe to the newsletter!</button>
+                        </div>
+                    </div>
+                    <br />
+                </form>
+                <div class="text-danger text-center" *ngIf="newsletterForm?.touched && newsletterForm.get('firstName')?.hasError('required')">
+                    *Please enter your name
+                </div>
+                <div class="text-danger text-center" *ngIf="newsletterForm?.touched && newsletterForm.get('email')?.hasError('required')">
+                    *Please enter an email
+                </div>
+                <div class="text-danger text-center" *ngIf="newsletterForm?.touched && newsletterForm.get('email')?.hasError('email')">
+                    *Please enter a valid email
+                </div>
+            </div>
         </div>
     </tab>
 </tabset>
