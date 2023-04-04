@@ -1,19 +1,22 @@
+<script>    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })</script>
 <nav class="navbar-light fixed-top navbar-expand-md bg-light">
     <div class="d-flex align-items-center justify-content-between">
-        <a class="navbar-brand appName p-2" routerLink="/" routerLinkActive="active">CompanyName</a>
+        <a class="navbar-brand appName p-2" routerLink="/" routerLinkActive="active">{{'NazwaFirmy' | translate}}</a>
         <div class="p-2">
             <ul class="navbar-nav me-auto mb-2 mb-md-0 d-flex flex-row">
                 <li class="nav-item mx-2">
-                    <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">About us</a>
+                    <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">{{'About us' | translate}}</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" routerLink="/jobs" routerLinkActive="active">Job opportunities</a>
+                    <a class="nav-link" routerLink="/jobs" routerLinkActive="active">{{'Job opportunities' | translate}}</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">{{'Contact' | translate}}</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+                    <a class="nav-link" routerLink="/services" routerLinkActive="active">{{'Services' | translate}}</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link" routerLink="/faq" routerLinkActive="active">FAQ</a>
@@ -21,9 +24,18 @@
             </ul>
         </div>
         <div class="p-2">
-            <button class="btn btn-outline-dark me-2">Login</button>
-            <button class="btn btn-outline-dark me-2">Register</button>
+            <button class="btn btn-outline-dark me-2">{{'Login' | translate}}</button>
+            <button class="btn btn-outline-dark me-2">{{'Register' | translate}}</button>
+            <div ngbDropdown class="d-inline-block me-2">
+                <button type="button" class="btn btn-dark" id="dropdownBasic1" ngbDropdownToggle>
+                    {{'Language' | translate}}
+                </button>
+                <button ><i class="fa fa-info-circle ms-1 align-top" title="For now, the only translated element is navbar."></i></button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="bg-light">
+                    <button class="btn btn-light w-100" (click)="switchLanguage('en')" style="display: block;">{{'English' | translate}} <i class="fi fi-gb bg-light"></i></button>
+                    <button class="btn btn-light w-100" (click)="switchLanguage('pl')" style="display: block;">{{'Polish' | translate}} <i class="fi fi-pl bg-light"></i></button>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
-
